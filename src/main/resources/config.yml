@@ -1,0 +1,41 @@
+# Structure of global chat
+global_structure: "<#6e94ff>[◎]<reset> #PLAYER > #MESSAGE"
+# Structure of local chat
+local_structure: "<gray>[◎]<reset> #PLAYER > #MESSAGE"
+# Radius of local chat, '0' for disable
+local_radius: 100
+
+
+# Replaces characters and strings with modified ones
+replacements:
+  enabled: true
+  list:
+  - "♥;<red>♥<reset>"
+  - "❤;<red>❤<reset>"
+  - "☺;<yellow>☺<reset>"
+  - "☻;<yellow>☻<reset>"
+  - "☹;<yellow>☹<reset>"
+  - "🔥;<gold>🔥<reset>"
+  - "⚠;<yellow>⚠<reset>"
+  - "☀;<yellow>☀<reset>"
+
+# The @ mentions
+mentions:
+  # Enables mention feature
+  enabled: true
+  # Enables @everyone mention
+  enabled_everyone: true
+  # Style of mentions
+  player_style: "<gradient:green:blue><bold>@%PLAYER%</bold></gradient>"
+  everyone_style: "<gradient:#FBF100:#FD8900><bold>@everyone</bold></gradient>"
+
+# Hover text content to reply to the player
+# Works only when player name formatted as #PLAYER
+hover_text:
+  just_l0fe: ""
+
+nobody_heard_you: "<dark_gray>Вас никто не услышал."
+
+messages:
+  # Config successfully reloaded message
+  reloaded: "<green>Config reloaded."

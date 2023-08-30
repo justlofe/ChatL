@@ -1,0 +1,15 @@
+name: SimpleChatL
+version: 2.3.4
+main: pb.lofe.chatl.ChatL
+api-version: 1.19
+folia-supported: true
+commands:
+  simplechatl: {}
+  msg:
+    aliases:
+      - tell
+      - m
+      - w
+softdepend:
+  - PlaceholderAPI
+  - DiscordSRV
