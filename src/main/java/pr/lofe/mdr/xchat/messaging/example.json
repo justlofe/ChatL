@@ -1,0 +1,26 @@
+[
+
+{
+  "dataT": 1,
+  "messageT": 0,
+  "sender": "just_l0fe",
+  "perm": true,
+  "receiver": "",
+  "message": "<green>|</green> <white>just_l0fe</white> <green>></green> Как дела?"
+},
+
+
+  {
+    "dataT": 1,
+    "messageT": 1,
+    "sender": "just_l0fe",
+    "receiver": "just_lofe",
+    "message": "Как делишки?"
+  },
+
+{
+  "dataT": 0,
+  "receiver": "just_l0fe",
+  "sound": "",
+  "message": ""
+}]

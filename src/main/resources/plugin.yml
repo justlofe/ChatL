@@ -1,8 +1,10 @@
-name: SimpleChatL
-version: 2.3.4
-main: pb.lofe.chatl.ChatL
+name: xChat
+version: 3.0
+main: pr.lofe.mdr.xchat.xChat
 api-version: 1.19
 folia-supported: true
+author: "just_l0fe"
+description: "Powerful chat plugin, developed for MODORU.fun"
 commands:
   simplechatl: {}
   msg:
@@ -10,6 +12,14 @@ commands:
       - tell
       - m
       - w
+  reply:
+    aliases:
+      - r
+  ignore:
+    aliases:
+      - unignore
 softdepend:
   - PlaceholderAPI
   - DiscordSRV
+depend:
+  - xSettings

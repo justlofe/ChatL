@@ -1,9 +1,22 @@
 # Structure of global chat
-global_structure: "<#6e94ff>[◎]<reset> #PLAYER > #MESSAGE"
+global_structure: "<#6e94ff>|</#6e94ff> #PLAYER <#6e94ff>></#6e94ff> <white>#MESSAGE</white>"
 # Structure of local chat
-local_structure: "<gray>[◎]<reset> #PLAYER > #MESSAGE"
-# Radius of local chat, '0' for disable
+local_structure: "<gray>|</gray> #PLAYER <gray>></gray> <white>#MESSAGE</white>"
+# Radius of local chat, '0' for disable, '-1' for local chat on server
 local_radius: 100
+
+death_messages:
+  local: true
+  radius: 100
+
+pm:
+  receiver: "<#4d88ff>[#SENDER » я]:</#4d88ff> <white>#MESSAGE</white>"
+  sender: "<#ffb84d>[я » #RECEIVER]:</#ffb84d> <white>#MESSAGE</white>"
+  not_found: "<red>[!]</red> <white>Игрок <red><underlined>не</underlined></red> найден!</white>"
+  ignores_you: "<red>[!]</red> <red>Вы в чёрном списке игрока, и <red><underlined>не можете отправить</underlined></red> ему сообщение!</red>"
+  ignoring: "<red>[!]</red> <white>Игрок находится <red><underlined>в чёрном</underlined></red> списке.</white>"
+  disabled: "<red>[!]</red> <white>Личные сообщения <red><underlined>отключены</underlined></red>!</white>"
+  attempt_disabled: "<red>[!]</red> <white>Игрок <red><underlined>отключил</underlined></red> личные сообщения!</white>"
 
 
 # Replaces characters and strings with modified ones
@@ -26,6 +39,7 @@ mentions:
   # Enables @everyone mention
   enabled_everyone: true
   # Style of mentions
+  sound: ""
   player_style: "<gradient:green:blue><bold>@%PLAYER%</bold></gradient>"
   everyone_style: "<gradient:#FBF100:#FD8900><bold>@everyone</bold></gradient>"
 
@@ -38,4 +52,29 @@ nobody_heard_you: "<dark_gray>Вас никто не услышал."
 
 messages:
   # Config successfully reloaded message
-  reloaded: "<green>Config reloaded."
+  player:
+    quit:
+      def: "#PLAYER <red>отключился</red>"
+      error: "#PLAYER <red>отключился [!]</red>"
+      hub: "#PLAYER <red>переместился в лобби</red>"
+    join: "#PLAYER <green>присоединился</green>"
+    first-join: "#PLAYER <#a1fa93>впервые на сервере!</#a1fa93>"
+  reloaded: "<green>Config reloaded.</green>"
+  location:
+    world: "<#b2f7ab>[#X, #Y, #Z]</#b2f7ab>"
+    world_nether: "<#f7786f>[#X, #Y, #Z]</#f7786f>"
+    world_the_end: "<#d89eff>[#X, #Y, #Z]</#d89eff>"
+  global_disabled: "<red>[!]</red> <white>Глобальный чат <red><underlined>отключён</underlined></red>!</white>"
+  not_ignoring: "<white>%img_error_red%</white> <red>Игрок не в чёрном списке!</red>"
+  now_ignoring: "<#a1fa93>[✔]</#a1fa93> <white>Игрок #PLAYER <red><underlined>заблокирован</underlined></red>, теперь вы не будете видеть его сообщения.</white>"
+  no_longer_ignoring: "<#a1fa93>[✔]</#a1fa93> <white>Игрок #PLAYER <green><underlined>разблокирован</underlined></green>, теперь вы будете видеть его сообщения.</white>"
+  already_ignoring: "<red>[!]</red> <white>Игрок уже в чёрном списке.</white>"
+
+
+notifies:
+  texting_you: "<#ffb84d>#PLAYER</#ffb84d> <white>печатает вам#DOTS</white>"
+
+dots:
+  - "<white><gray>.</gray>..</white>"
+  - "<white>.<gray>.</gray>.</white>"
+  - "<white>..<gray>.</gray></white>"
